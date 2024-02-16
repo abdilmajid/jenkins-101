@@ -4,9 +4,10 @@ pipeline {
             label 'docker-agent-python'
             }
       }
-    triggers {
-        githubPush() 
-    }
+    // triggers {
+    //     githubPush()
+    //     pollSCM '*/5 * * * *' 
+    // }
     stages {
         stage('Build') {
             steps {
