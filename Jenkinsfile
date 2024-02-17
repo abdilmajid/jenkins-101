@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo "Building Stage2..."
+                echo "Building Stage..."
                 sh '''
                 cd myapp
                 pip install -r requirements.txt
@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Test') {
             steps {
-                echo "Testing Stage2..."
+                echo "Testing Stage..."
                 sh '''
                 cd myapp
                 python3 hello.py
@@ -29,7 +29,7 @@ pipeline {
         }
         stage('Deliver') {
             steps {
-                echo 'Deliver Stage2...'
+                echo 'Deliver Stage...'
                 sh '''
                 echo "doing delivery stuff again.."
                 '''
